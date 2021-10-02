@@ -1,5 +1,5 @@
 <template>
-    <app-layout title="API Tokens">
+    <app-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 API Tokens
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-    import { defineComponent } from 'vue'
-    import ApiTokenManager from '@/Pages/API/Partials/ApiTokenManager.vue'
-    import AppLayout from '@/Layouts/AppLayout.vue'
+    import ApiTokenManager from './ApiTokenManager'
+    import AppLayout from './../../Layouts/AppLayout'
+    import JetSectionBorder from './../../Jetstream/SectionBorder'
 
-    export default defineComponent({
+    export default {
         props: [
             'tokens',
             'availablePermissions',
@@ -31,6 +31,7 @@
         components: {
             ApiTokenManager,
             AppLayout,
+            JetSectionBorder,
         },
-    })
+    }
 </script>
